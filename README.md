@@ -12,5 +12,20 @@ In order to make predictions and display results on regions familiar to the publ
 
 <img src="/image/tract_parcel.jpg" alt="drawing" width="600"/>
 
+### Objective
+Our primary objective was to develop a model which accurately predicts the population of regions of interest (parcels) for a single year. Our aim was to build a regression model using known population data, then apply the fitted model to predict the population of parcels for which covariate data is available but population data is not.
+
 ### Dataset Description
+Data for our primary analysis were sourced from the American Community Survey (ACS) and the King County Assessor’s office, both of which are publicly available sources. We were primarily interested in variables that existed in both data sources and had the potential to lend predictive value at the parcel level, such as number of bedrooms, geographical location, property tax assessed value, housing type, units per structure, and year structure was built.
+
+#### Training Data – American Community Survey (ACS)
+The American Community Survey is an ongoing survey conducted annually by the U.S. Census Bureau to act as a supplemental estimation tool to the decennial census. The ACS provides vital information about communities across the United States, including demographic, social, economic, and housing characteristics. It samples approximately 5% of households in a region on a yearly basis and offers household-level statistics, including our outcome of interest, persons-per-household.
+
+#### Prediction Data – King County Assessor (Assessor)
+The King County Assessor data contained property assessment information maintained by the King County Assessor's Office, including detailed information as residential homes, commercial buildings, vacant land, and other real estate assets. The King County Assessor’s Office collected from all taxable properties within King County’s jurisdiction. The data collected offered many of the same or similar characteristics to that of the ACS data, but did not provide data on persons-per-household. It provided data regarding the distribution of parcels by zip code and neighborhood, allowing for the potential to apply a fitted model to data from the desired region to predict population. The Assessor’s Office offers data ranging from 1982-2023.
+
+#### Common Predictor Variables
+After careful consideration, we decided to use the following four variables. Some of them were continuous variables such as Number of Bedrooms in the Unit and Tax Assessed Value of the Unit; some of them were categorical ones such as Unit type and Location. For the location variable, we used the specific PUMA, which was Public Use Microdata Areas, in which each household was located. PUMAs were defined by the US Census Bureau as non-overlapping, statistical geographic areas that partition each state or equivalent entity into geographic areas containing no fewer than 100,000 people each. A graph illustrated the relationship between PUMA and census tract had been shown below. For consistency, the right census tracts graph was the same as the previous tract vs. parcel graph.
+
+<img src="/image/tract_puma.jpg" alt="drawing" width="600"/>
 
