@@ -10,4 +10,7 @@ Unfortunately, for many applications, the desired data was not available. In mos
 
 In order to make predictions and display results on regions familiar to the public, such as neighborhoods or ZIP codes, PHSKC desired parcel-level estimates of population which could subsequently be aggregated to the desired regions. A parcel is defined as an identifiable unit of land that is treated as separate for valuation or zoning purposes4. In our setting, a parcel is a plot of land that contains either a single-family home or a group of apartment or condominium units.
 
-<img src="/output/tract_parcel.jpg" alt="drawing" width="600"/>
+<img src="/image/tract_parcel.jpg" alt="drawing" width="600"/>
+
+### Dataset Description
+
