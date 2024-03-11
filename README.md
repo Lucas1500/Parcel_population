@@ -57,7 +57,31 @@ $$
 RMSE_{i} = \frac{1}{5} \sum_{j=1}^{5} \left( \frac{\sum_{i \in I} w_i * (y_i - \hat{y_i})^2}{\sum_{i=1} w_i^2} \right)
 $$
 
+<img src="/image/cv.jpg" alt="drawing" width="600"/>
 
+**3. Selected the best model and evaluate model performance on ACS validation data:**
 
+* Selected the model with the smallest average weighted mean squared error 
+* Re-fit this model using all of the ACS training data and predicted on the ACS validation set in order to report model performance
 
+**4. Applied the best model to Assessor data and aggregated parcel predictions across county for comparison:**
 
+* Used the selected predictive model to predict populations for each parcel available in the Assessor data.
+
+* Aggregated parcel predictions across entire county and compared to US Census Bureau data to judge accuracy.
+
+<img src="/image/aggregate.jpg" alt="drawing" width="600"/>
+
+***
+### Result
+
+* In our case the best predictive model is a linear regression model with all covariates and interaction between bedrooms and tax value. The weighted mean square error of the model on unseen ACS training data is 1.178; on ACV validation data is 1.18; and the accuracy of prediction on Assessor data is 1.17%.
+  
+<img src="/image/res_model.jpg" alt="drawing" width="600"/>
+
+<img src="/image/res_validation.jpg" alt="drawing" width="600"/>
+
+<img src="/image/res_aggregate.jpg" alt="drawing" width="600"/>
+
+***
+### Discussion & Limitation
