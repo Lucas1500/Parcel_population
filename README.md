@@ -2,7 +2,7 @@
 # Estimating Parcel Level Population in the Puget Sound Region
 ## Erika Fox, Kaizhi Lu, Gavin Pierce
 
-This report presents our efforts supporting Public Health - Seattle and King County (PHSKC) in developing an advanced model for generating parcel-level population estimates in King County. More details of the report can be found [here](https://github.com/nrs02004/Jiujitsu-ELO/blob/main/writeup/cond-logit.pdf).
+This report presents our efforts supporting Public Health - Seattle and King County (PHSKC) in developing an advanced model for generating parcel-level population estimates in King County. More details of the report can be found [here](https://github.com/Lucas1500/Parcel_population/blob/main/writeup/Final_Report.pdf).
 
 ***
 ### Background & Problem Introduction
