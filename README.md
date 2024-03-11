@@ -1,3 +1,4 @@
+
 # Estimating Parcel Level Population in the Puget Sound Region
 ## Erika Fox, Kaizhi Lu, Gavin Pierce
 
@@ -75,7 +76,7 @@ $$
 ***
 ### Result
 
-* In our case the best predictive model is a linear regression model with all covariates and interaction between bedrooms and tax value. The weighted mean square error of the model on unseen ACS training data is 1.178; on ACV validation data is 1.18; and the accuracy of prediction on Assessor data is 1.17%.
+* In our case the best predictive model is a linear regression model with all covariates and interaction between bedrooms and tax value. The weighted mean square error of the model on unseen ACS training data is 1.178; on ACV validation data is 1.18; and the accuracy of prediction on Assessor data is 1.17%. Unfortunately, the final aggregated predictions across King county seems to be off from the real data (1.4 million vs. 2.25 million).
   
 <img src="/image/res_model.jpg" alt="drawing" width="600"/>
 
@@ -84,4 +85,30 @@ $$
 <img src="/image/res_aggregate.jpg" alt="drawing" width="600"/>
 
 ***
-### Discussion & Limitation
+### Limitation & Next Steps
+
+**Limitations**
+
+* Minimal Documentation
+  * Challenges with interpreting Assessor data ($NbrThisType$)
+    
+* Excluded group quarters from modeling
+  * No survey weights for group housing in ACS Data
+    * Per US Census Bureau, ACS surveys not representative of group quarters
+      
+* Limited publicly available data
+  * This forced us to fit models with very limited covariates
+    
+* Outcome of interest is inherently noisy
+  * Two households identical in all publicly available characteristics may vary extremely in number of occupants
+ 
+**Next Steps**
+
+* Improve upon cleaning Assessor data
+  *Clarify unit multiplier variable ($NbrThisType$)
+
+* Apply calibration techniques
+
+* Explore model stacking / ensemble methods
+  * Combining models to maximize predictive ability
+
